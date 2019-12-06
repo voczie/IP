@@ -1,12 +1,12 @@
 #include <stdio.h>
-/* Faça um programa que leia uma dia, um mês e um ano e
-verifique se ela é valida, considerando os dias do mês e se o ano é bissexto;*/
+/* FaÃ§a um programa que leia uma dia, um mÃªs e um ano e
+verifique se ela Ã© valida, considerando os dias do mÃªs e se o ano Ã© bissexto;*/
 
 /*
-    Título: IP-E001
+    TÃ­tulo: IP-E001
     Docente: Bidu
-    Discente: Maria Victória Grisi Pinheiro Fabião de Araújo
-    Matrícula: 20190027173
+    Discente: Maria VictÃ³ria Grisi Pinheiro FabiÃ£o de AraÃºjo
+    MatrÃ­cula: 20190027173
                                                             */
 
 
@@ -28,7 +28,7 @@ int main(void)
         scanf("%d", &anoVar);
 
     rangeAno = ((anoVar>=1900)&&(anoVar<=2100));
-    /* Variável para verificar se o ano inserido está
+    /* VariÃ¡vel para verificar se o ano inserido estÃ¡
     dendo do intervalo determinado pelo problema */
 
         while(!(rangeAno))
@@ -45,26 +45,26 @@ int main(void)
                         continue;
                     }
             }
-        /* Laço de repetição while para garantir que o dado de
+        /* LaÃ§o de repetiÃ§Ã£o while para garantir que o dado de
         entrada do ano seja (1900 <= anoVar <= 2100) */
 
     verifDia28 = ((diaVar>=1)&&(diaVar<=28));
     verifDia29 = ((diaVar>=1)&&(diaVar<=29));
     verifDia30 = ((diaVar>=1)&&(diaVar<=30));
     verifDia31 = ((diaVar>=1)&&(diaVar<=31));
-    /* Variáveis para verificar se o dia é válido.
-    Vão ser usadas em switch case com a variável mesVar,
-    para verificar os limites de dia de cada mês e validar
+    /* VariÃ¡veis para verificar se o dia Ã© vÃ¡lido.
+    VÃ£o ser usadas em switch case com a variÃ¡vel mesVar,
+    para verificar os limites de dia de cada mÃªs e validar
     a data */
 
     verifMes = ((mesVar>=1)&&(mesVar<=12));
-    /* Variável para verificar se o mês é válido */
+    /* VariÃ¡vel para verificar se o mÃªs Ã© vÃ¡lido */
 
     verifUm = ((anoVar%4==0)&&(anoVar%100!=0));
     verifDois = ((anoVar%4==0)&&(anoVar%100==0));
     verifTres = ((anoVar%100==0)&&(anoVar%400==0));
-    /* Variáveis para verificar se um ano é bissexto
-    ou não */
+    /* VariÃ¡veis para verificar se um ano Ã© bissexto
+    ou nÃ£o */
 
         if(verifUm)
             {
@@ -77,7 +77,7 @@ int main(void)
                             anoVerif = anoVar;
                         }
                 }
-        /* Verificando se um ano é bissexto (OK) */
+        /* Verificando se um ano Ã© bissexto (OK) */
 
 
         if(verifMes)
@@ -197,7 +197,7 @@ int main(void)
 
                         case(11):
                             {
-                                if(verifDia31)
+                                if(verifDia30)
                                     {
                                         mesVerif = mesVar;
                                         diaVerif = diaVar;
@@ -216,10 +216,10 @@ int main(void)
                             }
                     }
             }
-        /* Verificando se o dia é válido em certo mês (OK)*/
+        /* Verificando se o dia Ã© vÃ¡lido em certo mÃªs (OK)*/
 
     verifGeral = ((mesVerif != 0)&&(diaVerif != 0));
-    /* Variável para verificar se o mês e o dia são possíveis entre sí */
+    /* VariÃ¡vel para verificar se o mÃªs e o dia sÃ£o possÃ­veis entre sÃ­ */
 
             if(verifGeral)
                 {
@@ -237,7 +237,7 @@ int main(void)
                     {
                         printf("\n%d/%d/%d nao eh uma data valida\n", diaVar, mesVar, anoVar);
                     }
-            /* Verificando se a data é possível e, se sim, imprimindo as saídas requisitadas */
+            /* Verificando se a data Ã© possÃ­vel e, se sim, imprimindo as saÃ­das requisitadas */
 
 return 0;
 }
